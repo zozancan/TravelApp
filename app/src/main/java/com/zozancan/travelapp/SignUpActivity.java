@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SignUpActivity extends AppCompatActivity {
     EditText edt_full_name;
@@ -27,6 +28,15 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
         getCardView();
         getSpannableClick();
+
+        final Button btnSignUp = findViewById(R.id.btn_sign_up);
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
+                Toast.makeText(getApplicationContext(), "Hesabınız başarıyla oluşturuldu , Lütfen giriş yapınız!", Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            }
+        });
     }
 
     private void getSpannableClick() {
