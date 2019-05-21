@@ -12,31 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:id="@+id/headerLayout"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="0dp"
-            android:background="@drawable/bgapp"
-            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="48dp"
-                android:layout_marginTop="40dp"
-                android:text="Travel App"
-                android:textColor="@color/grayLight"
-                android:textSize="36sp" />
-
-        </LinearLayout>
 
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/navigation"
-            android:layout_below="@id/headerLayout" />
+            android:layout_above="@+id/navigation" />
 
 
         <android.support.design.widget.BottomNavigationView
