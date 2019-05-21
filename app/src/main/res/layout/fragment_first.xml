@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FirstFragment">
+    tools:context=".firstfragment.FirstFragment">
 
     <LinearLayout
         android:layout_height="wrap_content"
@@ -25,9 +25,11 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img_banking"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/circle_background_purple"
+                    android:onClick="imgBanking"
                     android:padding="10dp"
                     android:src="@drawable/ic_monetization_on_black_24dp" />
 
