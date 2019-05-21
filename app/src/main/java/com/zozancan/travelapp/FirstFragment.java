@@ -10,15 +10,8 @@ import android.view.ViewGroup;
 public class FirstFragment extends Fragment {
 
     public FirstFragment() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment
-     *
-     * @return A new instance of fragment FirstFragment.
-     */
     public static FirstFragment newInstance() {
         FirstFragment fragment = new FirstFragment();
         return fragment;

@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class SignInActivity extends AppCompatActivity {
-    TextView txt_sign_up;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
