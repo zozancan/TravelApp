@@ -14,7 +14,7 @@ public class InnerFragment2 extends Fragment {
 
     public static InnerFragment2 newInstance() {
         InnerFragment2 fragment = new InnerFragment2();
-        return fragment;
+        return fragment;   
     }
 
     @Override
