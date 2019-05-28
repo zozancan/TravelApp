@@ -27,4 +27,8 @@ public class InnerFragment1 extends BaseFragment {
     @Override
     protected void initialComponents(View view) {
     }
+
+    @Override
+    protected void registerEvents() {
+    }
 }

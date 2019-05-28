@@ -15,11 +15,14 @@ public abstract class BaseFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(getLayoutId(), container, false);
         initialComponents(view);
+        registerEvents();
         return view;
     }
 
     protected abstract int getLayoutId();
 
     protected abstract void initialComponents(View view);
+
+    protected abstract void registerEvents();
 
 }

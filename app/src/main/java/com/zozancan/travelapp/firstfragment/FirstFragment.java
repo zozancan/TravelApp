@@ -1,19 +1,15 @@
 package com.zozancan.travelapp.firstfragment;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
+
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.zozancan.travelapp.R;
+import com.zozancan.travelapp.base.BaseFragment;
 import com.zozancan.travelapp.util.ActivityNavigateHelper;
 
 
-public class FirstFragment extends Fragment {
+public class FirstFragment extends BaseFragment {
 
     private ImageView imgBanking;
 
@@ -25,26 +21,17 @@ public class FirstFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected int getLayoutId() {
+        return R.layout.fragment_first;
     }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_first, container, false);
-
-        initialComponent(view);
-        registerEvents();
-
-        return view;
-    }
-
-    private void initialComponent(View view) {
+    protected void initialComponents(View view) {
         imgBanking = view.findViewById(R.id.img_banking);
     }
 
-    private void registerEvents() {
+    @Override
+    protected void registerEvents() {
         imgBanking.setOnClickListener(new View.OnClickListener() {
 
             @Override
