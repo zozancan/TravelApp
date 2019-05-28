@@ -1,39 +1,30 @@
 package com.zozancan.travelapp;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class InnerFragment1 extends Fragment {
-    public static final String PAGE_TITLE = "Inner Tab1";
+import com.zozancan.travelapp.base.BaseFragment;
+import com.zozancan.travelapp.util.ActivityNavigateHelper;
 
+public class InnerFragment1 extends BaseFragment {
 
     public InnerFragment1() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment
-     *
-     * @return A new instance of fragment Fragment1.
-     */
     public static InnerFragment1 newInstance() {
-        InnerFragment1 fragment = new InnerFragment1();
-        return fragment;
+        return new InnerFragment1();
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected int getLayoutId() {
+        return R.layout.fragment_inner_fragment1;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inner_fragment1, container, false);
+    protected void initialComponents(View view) {
     }
 }

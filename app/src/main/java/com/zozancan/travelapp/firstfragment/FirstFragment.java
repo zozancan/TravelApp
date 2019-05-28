@@ -2,6 +2,7 @@ package com.zozancan.travelapp.firstfragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,18 +10,18 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.zozancan.travelapp.R;
+import com.zozancan.travelapp.util.ActivityNavigateHelper;
 
 
 public class FirstFragment extends Fragment {
 
-    ImageView imgBanking;
+    private ImageView imgBanking;
 
     public FirstFragment() {
     }
 
     public static FirstFragment newInstance() {
-        FirstFragment fragment = new FirstFragment();
-        return fragment;
+        return new FirstFragment();
     }
 
     @Override
@@ -29,24 +30,27 @@ public class FirstFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_first, container, false);
 
-        imgBanking = view.findViewById(R.id.img_banking);
+        initialComponent(view);
+        registerEvents();
 
+        return view;
+    }
+
+    private void initialComponent(View view) {
+        imgBanking = view.findViewById(R.id.img_banking);
+    }
+
+    private void registerEvents() {
         imgBanking.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(getActivity(), PhotosScroll.class);
-                startActivity(intent);
-
+                ActivityNavigateHelper.openPhotoScrollActivity(getActivity());
             }
         });
-
-        return view;
     }
 }
